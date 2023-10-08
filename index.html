@@ -1,0 +1,56 @@
+<!-- 
+Diagram - A simple HTML canvas that you can draw stuff on.
+Copyright (c) Cliff Earl, Antix Development, 2023.
+MIT "plus" License.
+-->
+
+ <!DOCTYPE html>
+<html>
+
+  <body style=background-color:#333></body>
+
+  <script src=diagram.js ></script>
+
+  <script>
+
+    //  The following code outputs the imagery that can be seen in the README.md file.
+
+    diagram(64, 64, 352, 176);
+
+    clear();
+
+    overlayGrid(16, 16);
+
+    outlineText('Diagrams are super groovy', 16, 16);
+
+    drawCircle(30, 70, 16);
+    drawCircle(70, 70, 16, '8bd', 1, [4, 4]);
+    fillCircle(110, 70, 16);
+    outlineCircle(150, 70, 16);
+    
+    drawRect(180, 54, 32, 32);
+    drawRect(220, 54, 32, 32, 'ce9', 1, [4, 4]);
+    fillRect(260, 54, 32, 32);
+    outlineRect(300, 54, 32, 32);
+
+    drawEllipse(30, 120, 16, 12);
+    drawEllipse(70, 120, 12, 16,'ddd', 1, [4, 4]);
+    fillEllipse(110, 120, 16, 12);
+    outlineEllipse(150, 120, 12, 16);
+
+    drawPoly([180, 105, 210, 110, 205, 140, 180, 130]);
+    drawPoly([220, 105, 250, 110, 245, 140, 220, 130], 'f9e', 1, [3, 3]);
+    fillPoly([260, 105, 290, 110, 285, 140, 260, 130], '857');
+    outlinePoly([300, 105, 330, 110, 325, 140, 300, 130], '857', 'f9e', 1, [3, 3]);
+
+    drawLine(102, 156, 204, 156 );
+    drawLine(228, 156, 326, 156, 'ccc', 1, [5, 5]);
+
+    plotPixel(24, 156, 'f00');
+    plotPixel(40, 156, '0f0');
+    plotPixel(56, 156, '00f');
+    plotPixel(72, 156, 'eee');
+
+  </script>
+
+</html>
