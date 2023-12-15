@@ -10,7 +10,7 @@ let
 // Functions
 // 
 
-_nothing = e => { }, // an empty function
+_nothing = e => {}, // an empty function
 
 _clamp = (v, min, max) => (v < min ? min : v > max ? max : v), // Constrain given value within given range.
 
